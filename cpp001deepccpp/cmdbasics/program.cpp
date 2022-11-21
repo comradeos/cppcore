@@ -1,6 +1,3 @@
-#include <iostream>
-
-int main() {
-    printf("hello...\n");
-    return 0;
+int main(int num) {
+    return num * num;
 }
