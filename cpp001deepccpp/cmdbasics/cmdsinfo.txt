@@ -5,4 +5,4 @@ g++ -c .\program.cpp
 g++ -o application.exe -Wall .\program.cpp
 
 дизассемблировать объект program.o в файл assembly.txt 
-objdump -d .\program.o >> assembly.txt
+objdump -d .\program.o >> program_o.asm
