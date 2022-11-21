@@ -1,3 +1,3 @@
-int main(int num) {
+int square(int num) {
     return num * num;
 }
