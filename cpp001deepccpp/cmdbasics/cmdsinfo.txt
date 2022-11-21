@@ -3,3 +3,6 @@ g++ -c .\program.cpp
 
 создать объектный файл, который содержит инструкции для процессора
 g++ -o application.exe -Wall .\program.cpp
+
+дизассемблировать объект program.o в файл assembly.txt 
+objdump -d .\program.o >> assembly.txt
