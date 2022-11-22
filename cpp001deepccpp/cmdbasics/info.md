@@ -11,3 +11,5 @@
 # g++ -o square.exe -Wall .\square.cpp  
 собрать программу  
 
+# objdump -d -r .\main.o >> main.o.asm 
+ключ -r информация о релокациях
