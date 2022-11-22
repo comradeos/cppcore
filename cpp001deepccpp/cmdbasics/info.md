@@ -1,13 +1,13 @@
-# g++ -c .\program.cpp  
+# g++ -c .\square.cpp  
 создать объектный файл, который содержит инструкции для процессора  
 ключ -с преобразует исходник в объектный файл  
 
-# g++ -o application.exe -Wall .\program.cpp  
+# g++ -o square.exe -Wall .\square.cpp  
 создать объектный файл, который содержит инструкции для процессора  
 
-# objdump -d .\program.o >> program_o.asm  
-дизассемблировать объект program.o в файл assembly.txt  
+# objdump -d .\square.o >> square.o.asm  
+дизассемблировать объект program.o в файл square.o.asm   
 
-# g++ -o program.exe -Wall .\program.cpp  
+# g++ -o square.exe -Wall .\square.cpp  
 собрать программу  
 
