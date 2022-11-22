@@ -10,3 +10,4 @@
 
 # g++ -o program.exe -Wall .\program.cpp  
 собрать программу  
+
