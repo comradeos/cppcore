@@ -1,3 +1,4 @@
-int square(int value) {
+int square(int value)
+{
     return value * value;
 }
