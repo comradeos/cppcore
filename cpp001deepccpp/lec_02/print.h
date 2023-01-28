@@ -23,3 +23,8 @@ void print(char value)
     cout << value <<"\n";
 }
 
+void print(long long value) 
+{
+    cout << value <<"\n";
+}
+
