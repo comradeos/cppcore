@@ -78,3 +78,14 @@ g++ -E .\main.cpp
 ```
 #include <файл>
 ```
+
+Define (опасно): #define x y - вместо y подставляет x.  
+```
+#define true false // happy debugging 
+#define true !!(rand() % 2) 
+```
+
+Компоновка:  
+```
+g++ -o my_prog main.o square.o
+```
