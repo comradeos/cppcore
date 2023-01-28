@@ -3,21 +3,12 @@
 int main()
 {
     cout << "app start... \n\n\n";
-    int number = 123;
     
-    int * addr = &number;
+    int num = 123;
+    cout << num << "\n";
 
-    void * invalid = nullptr;
-
-    char charValue = 'a';
-    print(charValue);
-
-    char * charPointer = &charValue;
-
-    cout << charPointer << "\n";
-
-    * charPointer = 'b';
-    print(charValue);
+    int * numPointer = &num;
+    cout << numPointer << "\n";
 
     return 0;
 }
