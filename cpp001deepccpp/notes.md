@@ -1,6 +1,6 @@
 [Углублённое программирование на C/C++](https://www.youtube.com/watch?v=YXbrMny86U0&list=PLrCZzMib1e9qjGLjg83bCksf3N7FIy7jg)  
 
-Удобный инструмент [godbolt.org](https://godbolt.org/)  
+Удобный инструмент для дизассемблирования программы [godbolt.org](https://godbolt.org/)  
 
 Ключ -c преобразует файл cpp в объектный файл (*.o).  
 Объектный файл содержит в себе инструкции для процессора (машинный код).  
@@ -15,6 +15,13 @@ g++ -c .\square.cpp
 objdump -d .\square.o
 ```
 
+file format pe-x86-64 - это формат объектного файла (для win)  
+
+
+
+
+
+
 Откомпилировать одной командой  
 ```
 g++ .\main.cpp
@@ -24,3 +31,5 @@ g++ .\main.cpp
 ```
 g++ -o my_program .\main.cpp
 ```
+
+
