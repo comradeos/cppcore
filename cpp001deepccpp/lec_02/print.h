@@ -1,12 +1,25 @@
 #include <iostream>
 #include <string>
 
-void print(int value) 
+using namespace std;
+
+void print(int* value) 
 {
-    std::cout << value <<"\n";
+    cout << *value <<"\n";
 }
 
-void print(std::string value) 
+void print(string value) 
 {
-    std::cout << value <<"\n";
+    cout << value <<"\n";
 }
+
+void print(double value) 
+{
+    cout << value <<"\n";
+}
+
+void print(char value) 
+{
+    cout << value <<"\n";
+}
+
