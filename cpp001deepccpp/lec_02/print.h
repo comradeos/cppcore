@@ -3,9 +3,9 @@
 
 using namespace std;
 
-void print(int* value) 
+void print(int value) 
 {
-    cout << *value <<"\n";
+    cout << value <<"\n";
 }
 
 void print(string value) 

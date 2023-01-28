@@ -2,13 +2,11 @@
 
 int main()
 {
-    // std::cout << "app start... \n\n\n";
+    cout << "app start... \n\n\n";
     int number = 123;
-    int* addr = &number;
     
-    print("11111");
-    print(addr);
-    print("11111");
+    int* addr = &number;
+
 
     void* invalid = nullptr;
 
