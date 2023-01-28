@@ -119,3 +119,8 @@ int* addr = &number;
 ```
 void* invalid = nullptr;
 ```
+
+Разница между указателями:  
+```
+ptrdiff_t d1 = n1Ptr - n1Ptr2;
+```
