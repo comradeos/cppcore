@@ -11,4 +11,4 @@ my_prog: main.cpp square.cpp square.h
 
 clean:
 	echo "aa"
-	rm *.exe
+	rm aaa

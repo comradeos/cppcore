@@ -106,3 +106,5 @@ ar rc my_lib.a square.o
 hello:
 	echo "Hello, World"
 ```
+
+## Лекция №2.  
