@@ -89,3 +89,8 @@ Define (опасно): #define x y - вместо y подставляет x.
 ```
 g++ -o my_prog main.o square.o
 ```
+
+Создание библиотек:  
+```
+ar rc my_lib.a square.o
+``` 

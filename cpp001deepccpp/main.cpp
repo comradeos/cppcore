@@ -1,3 +1,11 @@
+int square(int value);
+
+int main()
+{
+    return square(2);
+}
+
+/*
 #include "square.h"
 #include <iostream>
 #include <time.h>
@@ -20,3 +28,4 @@ int main()
     std::cout << b << "\n";
     return square(2);
 }
+*/
