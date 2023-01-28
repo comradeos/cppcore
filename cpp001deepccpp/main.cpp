@@ -1,4 +1,4 @@
-int square(int value);
+#include "square.h"
 
 int main()
 {
