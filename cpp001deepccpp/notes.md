@@ -1,5 +1,6 @@
 [Углублённое программирование на C/C++](https://www.youtube.com/watch?v=YXbrMny86U0&list=PLrCZzMib1e9qjGLjg83bCksf3N7FIy7jg)  
 
+## Лекция №1.  
 Удобный инструмент для дизассемблирования программы [godbolt.org](https://godbolt.org/)  
 
 Ключ -c преобразует файл cpp в объектный файл (*.o).  
