@@ -1,8 +1,9 @@
-int square(int value);
+#include <iostream>
 
 int main()
 {
-    return square(2);
+    std::cout << "make works\n";
+    return 0;
 }
 
 /*

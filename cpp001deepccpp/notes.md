@@ -94,3 +94,15 @@ g++ -o my_prog main.o square.o
 ```
 ar rc my_lib.a square.o
 ``` 
+
+Утилита автоматизации [Make](https://makefiletutorial.com/):  
+Синтаксис:  
+```
+цель: зависимость
+[tab] команда
+```
+Пример:  
+```
+hello:
+	echo "Hello, World"
+```
