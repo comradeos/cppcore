@@ -1,7 +1,6 @@
-#include <iostream>
+int square(int value);
 
-int main() {
-    printf("hello\n");
-    std::cout << "Hello, World!" << std::endl;
-    return 0;
+int main()
+{
+    return square(2);
 }
