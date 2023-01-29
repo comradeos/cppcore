@@ -4,6 +4,6 @@
 
 int main()
 {
-    printf("%s", "hello\n");
+    printf("%s", "hello c++\n");
     return 0;
 }
