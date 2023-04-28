@@ -1,3 +1,4 @@
+#include <stdio.h>
 #include "clib.h"
 
 void fun()

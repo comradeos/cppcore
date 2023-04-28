@@ -1,6 +1,11 @@
 #include <iostream>
 
+extern "C" {
+    #include "clib.h"
+}
+
 int main() {
-    std::cout << "Hello, World! \nasd " << std::endl;
+    std::cout << "hello" << std::endl;
+    fun();
     return 0;
 }
