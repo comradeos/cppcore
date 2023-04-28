@@ -1,4 +1,5 @@
 #include <iostream>
+
 #define A true
 
 #ifdef A
@@ -13,7 +14,6 @@ using namespace std;
 int main()
 {
     cout << "How to use extern C?\n";
-
     #ifdef A
         myLibFunction();
     #endif
