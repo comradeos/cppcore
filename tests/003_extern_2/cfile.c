@@ -3,5 +3,5 @@
 
 void myFunction()
 {
-    printf("hello from func()\n");
+    printf("hello from myFunction()\n");
 }
