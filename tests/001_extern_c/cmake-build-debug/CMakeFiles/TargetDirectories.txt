@@ -1,0 +1,3 @@
+C:/Workspace/cppcore/tests/001_extern_c/cmake-build-debug/CMakeFiles/001_extern_c.dir
+C:/Workspace/cppcore/tests/001_extern_c/cmake-build-debug/CMakeFiles/edit_cache.dir
+C:/Workspace/cppcore/tests/001_extern_c/cmake-build-debug/CMakeFiles/rebuild_cache.dir
