@@ -1,11 +1,19 @@
 #include <iostream>
+#define A true
 
-extern "C" {
-    #include "clib.h"
-}
+#ifdef A
+    extern "C" {
+        #include "clib.h"
+    }
+#endif
+
+#include <windows.h>
+
+using namespace std;
 
 int main() {
-    std::cout << "hello" << std::endl;
+    SetConsoleOutputCP(65001);
+    cout << "Привіт\n";
     fun();
     return 0;
 }
