@@ -1,1 +1,1 @@
-void fun();
+void myLibFunction();

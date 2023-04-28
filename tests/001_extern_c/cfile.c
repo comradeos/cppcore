@@ -1,7 +1,7 @@
 #include <stdio.h>
 #include "clib.h"
 
-void fun()
+void myLibFunction()
 {
-    printf("Hello from c file!\n");
+    printf("Hello from myLibFunction()\n");
 }
