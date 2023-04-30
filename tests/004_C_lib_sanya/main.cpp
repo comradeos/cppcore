@@ -2,11 +2,11 @@
 // C++ program to display "Hello World"
  
 // Header file for input output functions
-extern "C" { 
-     #include "dac_calc.h" 
- }
+// extern "C" { 
+//     #include "dac_calc.h" 
+//     }
 #include <iostream>
-// #include "dac_calc.h"
+#include "dac_calc.h"
 
 using namespace std;
 

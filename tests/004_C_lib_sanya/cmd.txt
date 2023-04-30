@@ -1,0 +1,15 @@
+gcc -c .\dac_calc.c -o lib.o
+
+Компілюємо CPP файл
+g++ -c .\main.cpp 
+
+Лінкуємо CPP файл з C файлом і збираємо в бінарь main.exe 
+g++ .\main.o .\cfile.o -o main.exe
+
+Запускаємо бінарь
+.\main.exe
+
+--------------------------------
+
+або все разом 
+gcc -c .\dac_calc.c -o dac_calc.o ; g++ -c .\main.cpp  -o main.o ; g++ .\main.o .\dac_calc.o -o app ; .\app
