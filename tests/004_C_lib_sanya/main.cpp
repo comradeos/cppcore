@@ -1,23 +1,15 @@
-
-// C++ program to display "Hello World"
- 
-// Header file for input output functions
-
 #include <iostream>
 
-extern "C" { 
+extern "C" 
+{ 
     #include "dac_calc.h" 
 }
 
 using namespace std;
 
-int main() {
-
-         // Program code here
-         int dac_result = SetVoltage(3000);
-
-         cout << "dac_result " << dac_result; 
-
-         return 0;
-
+int main()
+{
+    int dac_result = SetVoltage(3000);
+    cout << "dac_result " << dac_result; 
+    return 0;
 }
