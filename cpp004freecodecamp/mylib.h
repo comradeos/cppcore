@@ -1,0 +1,1 @@
+#define MYVAR 25
