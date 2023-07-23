@@ -16,6 +16,9 @@ int main(int agrc, char ** argv) {
     int num_4 = 0b0001111;
     cout << "num_4 (binary): " << num_4 << endl;
 
+    auto number = "asdasdas";
+    cout << "number: " << number << endl;
+
 
     return 0;
 }
