@@ -2,6 +2,6 @@
 #include "modules/001_test.h"
 
 int main() {
-    helloWorld();
+    testOop();
     return 0;
 }
