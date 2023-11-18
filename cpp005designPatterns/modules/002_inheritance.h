@@ -12,6 +12,7 @@ public:
         this->width = width;
     }
 
+    [[nodiscard]]
     float square() const {
         return this->height * this->width;
     }
@@ -30,4 +31,5 @@ void InheritanceTest() {
     float result = win.square();
     cout << win.brand << endl;
     cout << result << endl;
+    std::free(&win);
 }
