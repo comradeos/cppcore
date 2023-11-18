@@ -28,8 +28,9 @@ public:
 
 void InheritanceTest() {
     Window002 win(2, 3, "io");
+    Window002 * pWin = &win;
     float result = win.square();
     cout << win.brand << endl;
     cout << result << endl;
-    std::free(&win);
+    std::free(pWin);
 }
