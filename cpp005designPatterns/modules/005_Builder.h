@@ -3,8 +3,8 @@
 
 class Car {
 public:
-    int seats;
-    int wheels;
+    [[maybe_unused]] int seats = 0;
+    [[maybe_unused]] int wheels = 0;
     string color = "unknown";
     string manufacturer = "unknown";
 };
