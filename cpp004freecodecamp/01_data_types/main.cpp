@@ -17,6 +17,8 @@ int main()
 
     ints();
     floats();
+    bools();
+    chars();
 
     return 0;
 }

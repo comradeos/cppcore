@@ -1,5 +1,6 @@
 #include <iostream>
 #include "funcs.h"
+#include <iomanip>
 
 void sep() {
     std::cout << "-------------------------" << std::endl;
@@ -84,6 +85,81 @@ void floats() {
     std::cout << "sizeof double: " << sizeof(double) << std::endl;
     std::cout << "sizeof long double : " << sizeof(long double) << std::endl;
 
+    number1 = 1;
+    number2 = 0;
+    number3 = number1 / number2;
+    std::cout << "number3 is: " << number3 << std::endl; // inf (infinity)
+    
+    number1 = -1;
+    number2 = 0;
+    number3 = number1 / number2;
+    std::cout << "number3 is: " << number3 << std::endl; // -inf (negative infinity)
+   
+    number1 = 0;
+    number2 = 0;
+    number3 = number1 / number2;
+    std::cout << "number3 is: " << number3 << std::endl; // nan (not a number)
+
+    float f1 = 10.1234213455343242341234f; // 10.1234213
+    double d1 = 10.1234213455343242341234; // 10.123421345534324
+    long double ld1 = 10.1234213455343242341234L; // 10.123421345534324234
+
+    
+    std::cout << std::setprecision(20);  // Control the precision from std::cout.
+    std::cout << "f1: " << f1 << std::endl;
+    std::cout << "d1: " << d1 << std::endl;
+    std::cout << "ld1: " << ld1 << std::endl; // 10.1234 ? почему не 10.1234213455343242341234
 }
 
 
+void bools() {
+    sep();
+    std::cout << "bools" << std::endl;
+
+    bool b1 {true};
+    bool b2 {false};
+
+    std::cout << "b1: " << b1 << std::endl;
+    std::cout << "b2: " << b2 << std::endl;
+
+    std::cout << std::boolalpha; // Change the output of bools to true/false
+    std::cout << "b1: " << b1 << std::endl;
+    std::cout << "b2: " << b2 << std::endl;
+
+    std::cout << std::noboolalpha; // Change the output of bools to 1/0
+    std::cout << "b1: " << b1 << std::endl;
+    std::cout << "b2: " << b2 << std::endl;
+
+    std::cout << std::boolalpha; // Change the output of bools to true/false
+    std::cout << "b1: " << b1 << std::endl;
+    std::cout << "b2: " << b2 << std::endl;
+
+    bool ab1 = true;
+    bool ab2 = false;
+    std::cout << "sizeof(bool): " << sizeof(bool) << std::endl;
+    std::cout << "sizeof(ab1): " << sizeof(ab1) << std::endl;
+    std::cout << "sizeof(ab2): " << sizeof(ab2) << std::endl;
+}
+
+
+void chars() {
+    sep();
+    std::cout << "chars" << std::endl;
+
+    char c1 {'A'};
+    char c2 {'B'};
+    char c3 {'C'};
+
+    std::cout << "c1: " << c1 << std::endl; // A
+    std::cout << "c2: " << c2 << std::endl; // B
+    std::cout << "c3: " << c3 << std::endl; // C
+
+    char c4 = 70;
+    char c5 = 71;
+    char c6 = 72;
+
+    std::cout << "c4: " << c4 << std::endl; // F
+    std::cout << "c5: " << c5 << std::endl; // G
+    std::cout << "c6: " << c6 << std::endl; // H
+    std::cout << "static_cast<int>(c6): " << static_cast<int>(c6) << std::endl; // один из операторов приведения типов в C++ 72
+}

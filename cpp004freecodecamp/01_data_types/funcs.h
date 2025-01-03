@@ -4,5 +4,7 @@
 void sep();
 void ints();
 void floats();
+void bools();
+void chars();
 
 #endif // FUNCS_H
