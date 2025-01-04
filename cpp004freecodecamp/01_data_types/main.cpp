@@ -19,6 +19,7 @@ int main()
     floats();
     bools();
     chars();
+    autos();
 
     return 0;
 }

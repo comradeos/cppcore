@@ -6,5 +6,6 @@ void ints();
 void floats();
 void bools();
 void chars();
+void autos();
 
 #endif // FUNCS_H

@@ -6,6 +6,7 @@ void sep() {
     std::cout << "-------------------------" << std::endl;
 }
 
+
 void ints() {
     sep();
 
@@ -109,6 +110,17 @@ void floats() {
     std::cout << "f1: " << f1 << std::endl;
     std::cout << "d1: " << d1 << std::endl;
     std::cout << "ld1: " << ld1 << std::endl; // 10.1234 ? почему не 10.1234213455343242341234
+
+    float a = 1.0f;
+    float b = 0.0f;
+    float c = a / b;
+    float d = -c;
+    std::cout << "c: " << c << " type: " << typeid(c).name() << std::endl; // inf
+    std::cout << "d: " << d << " type: " << typeid(d).name() << std::endl; // -inf
+
+    auto e = c + d;
+    std::cout << "e: " << e << " type: " << typeid(e).name() << std::endl; // nan
+
 }
 
 
@@ -163,3 +175,28 @@ void chars() {
     std::cout << "c6: " << c6 << std::endl; // H
     std::cout << "static_cast<int>(c6): " << static_cast<int>(c6) << std::endl; // один из операторов приведения типов в C++ 72
 }
+
+
+void autos() {
+    sep();
+    std::cout << "autos" << std::endl;
+
+    auto a1 = 10;
+    // ptint value and type
+    std::cout << "a1: " << a1 << " type: " << typeid(a1).name() << std::endl;
+
+    auto a2 = 10.0;
+    std::cout << "a2: " << a2 << " type: " << typeid(a2).name() << std::endl;
+
+    auto a3 = 'A';
+    std::cout << "a3: " << a3 << " type: " << typeid(a3).name() << std::endl;
+
+
+    //Auto type deduction
+    //Careful about auto assignments
+    auto var3 {333u}; // Declare and initialize with type deduction
+    var3 = -22; // Assign negative number. DANGER!
+    std:: cout << "var3: "<< var3 << std::endl; // garbage because of the assignment of a negative number to an unsigned int
+}
+
+
