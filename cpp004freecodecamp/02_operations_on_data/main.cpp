@@ -75,6 +75,120 @@ void prefix_postfix() {
 }
 
 
+void compound_assignment() {
+    sep();
+    std::cout << "Compound assignment" << std::endl;
+
+    int value {5};
+    value += 1;
+    std::cout << value << std::endl; // 6
+
+    value -= 1;
+    std::cout << value << std::endl; // 5
+
+    value *= 2;
+    std::cout << value << std::endl; // 10
+
+    value /= 2;
+    std::cout << value << std::endl; // 5
+
+    value %= 2;
+    std::cout << value << std::endl; // 1
+
+    sep();
+    value = 5;
+    value += 3 * 4;
+    std::cout << value << std::endl; // 17
+
+    value = 5;
+    value *= 3 + 4;
+    std::cout << value << std::endl; // 35
+
+    value = 5;
+    value /= 3 + 4;
+    std::cout << value << std::endl; // 0
+
+    value = 5;
+    value %= 3 + 4;
+    std::cout << value << std::endl; // 1
+}
+
+
+void relational_operators() {
+    sep();
+    std::cout << "Relational operators" << std::endl;
+
+    int a {10};
+    int b {20};
+
+    std::cout << "a: " << a << std::endl;
+    std::cout << "b: " << b << std::endl;
+
+    std::cout << std::boolalpha; // выводит true/false вместо 1/0
+    std::cout << "a == b: " << (a == b) << std::endl; // false
+    std::cout << "a != b: " << (a != b) << std::endl; // true
+    std::cout << "a < b: " << (a < b) << std::endl; // true
+    std::cout << "a > b: " << (a > b) << std::endl; // false
+    std::cout << "a <= b: " << (a <= b) << std::endl; // true
+    std::cout << "a >= b: " << (a >= b) << std::endl; // false
+
+    // sep();
+    // std::cout << "using no parentheses" << std::endl;
+    // std::cout << a == b << std::endl; // - error! place parentheses around comparison expression to evaluate it first
+
+
+}
+
+
+void logical_operators() {
+    sep();
+    std::cout << "Logical operators" << std::endl;
+
+    bool a {false};
+    bool b {false};
+    bool c {false};
+
+    std::cout << std::boolalpha; // выводит true/false вместо 1/0
+    std::cout << "a: " << a << std::endl;
+    std::cout << "b: " << b << std::endl;
+
+    std::cout << "a && b: " << (a && b) << std::endl; // false
+    std::cout << "a || b: " << (a || b) << std::endl; // false
+    std::cout << "!(a && b): " << !(a && b) << std::endl; // true
+    std::cout << "!(a || b): " << !(a || b) << std::endl; // true
+
+    // combining logical and relational operators
+    std::cout << "a && b && c " << (a && b && c) << std::endl;
+}
+
+
+void output_formatting() {
+    sep();
+    std::cout << "Output formatting" << std::endl;
+
+    // как из этого
+    // Daniel Gray 25
+    // Stanley Woods 33
+    // Jordan Parker 45
+    // Joe Ball 21
+    // Josh Carr 27
+    // Izaiah Robinson 29
+
+    // сделать это
+    // Daniel       Gray       25
+    // Stanley      Woods      33
+    // Jordan       Parker     45
+    // Joe          Ball       21
+    // Josh         Carr       27
+    // Izaiah       Robinson   29
+
+    // #include <ios> 
+    // #include <iomanip>
+
+    
+}
+
+
 int main()
 {
     std::cout << "02_operations_on_data" << std::endl;
@@ -82,6 +196,9 @@ int main()
 
     basic_operations();
     prefix_postfix();
+    compound_assignment();
+    relational_operators();
+    logical_operators();
 
     return 0;
 }
