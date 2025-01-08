@@ -5,6 +5,7 @@ clear && g++ -std=c++11 -o main -Wall main.cpp && ./main
  */
 
 #include <iostream>
+#include <iomanip>
 
 void sep() { std::cout << "-------------------------" << std::endl;}
 
@@ -185,7 +186,98 @@ void output_formatting() {
     // #include <ios> 
     // #include <iomanip>
 
+    std::cout << "Daniel" << "Gray" << 25 << std::endl;
+    std::cout << "Stanley" << "Woods" << 33 << std::endl;
+    std::cout << "Jordan" << "Parker" << 45 << std::endl;
+    std::cout << "Joe" << "Ball" << 21 << std::endl;
+    std::cout << "Josh" << "Carr" << 27 << std::endl;
+    std::cout << "Izaiah" << "Robinson" << 29 << std::endl;
+
+    sep();
+    std::cout << std::setw(10) << std::left << "Daniel" << std::setw(10) << std::left << "Gray" << std::setw(5) << std::right << 25 << std::endl;
+    std::cout << std::setw(10) << std::left << "Stanley" << std::setw(10) << std::left << "Woods" << std::setw(5) << std::right << 33 << std::endl;
+    std::cout << std::setw(10) << std::left << "Jordan" << std::setw(10) << std::left << "Parker" << std::setw(5) << std::right << 45 << std::endl;
+    std::cout << std::setw(10) << std::left << "Joe" << std::setw(10) << std::left << "Ball" << std::setw(5) << std::right << 21 << std::endl;
+    std::cout << std::setw(10) << std::left << "Josh" << std::setw(10) << std::left << "Carr" << std::setw(5) << std::right << 27 << std::endl;
+    std::cout << std::setw(10) << std::left << "Izaiah" << std::setw(10) << std::left << "Robinson" << std::setw(5) << std::right << 29 << std::endl;
+
+    sep();
+    std::cout << std::setw(10) << std::right << "Daniel" << std::setw(10) << std::right << "Gray" << std::setw(5) << std::right << 25 << std::endl;
+    std::cout << std::setw(10) << std::right << "Stanley" << std::setw(10) << std::right << "Woods" << std::setw(5) << std::right << 33 << std::endl;
+    std::cout << std::setw(10) << std::right << "Jordan" << std::setw(10) << std::right << "Parker" << std::setw(5) << std::right << 45 << std::endl;
+    std::cout << std::setw(10) << std::right << "Joe" << std::setw(10) << std::right << "Ball" << std::setw(5) << std::right << 21 << std::endl;
+    std::cout << std::setw(10) << std::right << "Josh" << std::setw(10) << std::right << "Carr" << std::setw(5) << std::right << 27 << std::endl;
+    std::cout << std::setw(10) << std::right << "Izaiah" << std::setw(10) << std::right << "Robinson" << std::setw(5) << std::right << 29 << std::endl;
+
+    sep();
+    std::cout << std::setfill('-');
+    std::cout << std::setw(10) << std::left << "Daniel" << std::setw(10) << std::left << "Gray" << std::setw(5) << std::right << 25 << std::endl;
+    std::cout << std::setw(10) << std::left << "Stanley" << std::setw(10) << std::left << "Woods" << std::setw(5) << std::right << 33 << std::endl;
+    std::cout << std::setw(10) << std::left << "Jordan" << std::setw(10) << std::left << "Parker" << std::setw(5) << std::right << 45 << std::endl;
+    std::cout << std::setw(10) << std::left << "Joe" << std::setw(10) << std::left << "Ball" << std::setw(5) << std::right << 21 << std::endl;
+    std::cout << std::setw(10) << std::left << "Josh" << std::setw(10) << std::left << "Carr" << std::setw(5) << std::right << 27 << std::endl;
+    std::cout << std::setw(10) << std::left << "Izaiah" << std::setw(10) << std::left << "Robinson" << std::setw(5) << std::right << 29 << std::endl;
+    /*
+    Daniel----Gray---------25
+    Stanley---Woods--------33
+    Jordan----Parker-------45
+    Joe-------Ball---------21
+    Josh------Carr---------27
+    Izaiah----Robinson-----29
+    */
+
+    sep();
+    //    std::boolalpha
+    bool boolValue {true};
+    std::cout << std::boolalpha << boolValue << std::endl; // true
+    std::cout << std::noboolalpha << boolValue << std::endl; // 1
+
+    sep();
+    // std::showpos
+    int intValue {10};
+    std::cout << std::showpos << intValue << std::endl; // +10
+    intValue = -10;
+    std::cout << std::noshowpos << intValue << std::endl; // 10
+
+    sep();
+    // std:: dec std::oct and std::hex
+    intValue = 30;
+    std::cout << std::dec << intValue << std::endl; // 30
+    std::cout << std::oct << intValue << std::endl; // 36
+    std::cout << std::hex << intValue << std::endl; // 1e
+
+    sep();
+    // std::showbase
+    intValue = 3850;  
+    std::cout << std::showbase << std::dec << intValue << std::endl; // 30
+    std::cout << std::showbase << std::oct << intValue << std::endl; // 036
+    std::cout << std::showbase << std::hex << intValue << std::endl; // 0x1e
+
+    sep();
+    // std::scientific - std::fixed
+    double doubleValue {123456789.987654321};
+    std::cout << std::scientific << doubleValue << std::endl; // 1.234568e+08
+    std::cout << std::fixed << doubleValue << std::endl; // 123456789.987654
+
+    sep();
+    // std::setprecision
+    doubleValue = 123.456789;
+    std::cout << std::setprecision(2) << doubleValue << std::endl; // 123.46
+    std::cout << std::setprecision(3) << doubleValue << std::endl; // 123.457
+    std::cout << std::setprecision(4) << doubleValue << std::endl; // 123.4568
+}
+
+void std_flush() {
+    sep();
     
+    std::string message = "Hello, World!";
+
+    std::cout << message << std::endl << std::flush;
+}
+
+void math_functions() {
+    sep();
+    std::cout << "Math functions" << std::endl;
 }
 
 
@@ -199,6 +291,9 @@ int main()
     compound_assignment();
     relational_operators();
     logical_operators();
+    output_formatting();
+    std_flush();
+    math_functions();
 
     return 0;
 }

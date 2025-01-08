@@ -11,3 +11,6 @@ https://en.cppreference.com/w/cpp/language/operator_precedence
 https://youtu.be/8jLOx1hD3_o?feature=shared&t=19404
 
 https://youtu.be/8jLOx1hD3_o?feature=shared&t=20452
+
+Math functions
+https://youtu.be/8jLOx1hD3_o?feature=shared&t=24074 
