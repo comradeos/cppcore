@@ -6,6 +6,8 @@ clear && g++ -std=c++11 -o main -Wall main.cpp && ./main
 
 #include <iostream>
 #include <iomanip>
+#include <cmath>
+
 
 void sep() { std::cout << "-------------------------" << std::endl;}
 
@@ -265,6 +267,8 @@ void output_formatting() {
     std::cout << std::setprecision(2) << doubleValue << std::endl; // 123.46
     std::cout << std::setprecision(3) << doubleValue << std::endl; // 123.457
     std::cout << std::setprecision(4) << doubleValue << std::endl; // 123.4568
+
+    std::cout << std::dec << std::endl;
 }
 
 void std_flush() {
@@ -276,8 +280,46 @@ void std_flush() {
 }
 
 void math_functions() {
+    // #include <cmath>
     sep();
     std::cout << "Math functions" << std::endl;
+
+    double value {7.7};
+
+    std::cout << "value: " << value << std::endl; // 7.7 
+    std::cout << "sqrt(value): " << sqrt(value) << std::endl; // 2.77489 квадратный корень
+    std::cout << "cbrt(value): " << cbrt(value) << std::endl; // 1.92261 кубический корень
+    std::cout << "pow(value, 2): " << pow(value, 2) << std::endl; // 59.29 возведение в степень
+    std::cout << "pow(value, 3): " << pow(value, 3) << std::endl; // 456.533 возведение в степень
+    std::cout << "pow(10, 3): " << pow(10, 3) << std::endl; // 1000 возведение в степень
+    std::cout << "pow(10, 3): " << pow(10.0, 3.0) << std::endl; // 1000 возведение в степень
+    std::cout << "abs(-10): " << abs(-10) << std::endl; // 10 абсолютное значение 
+    std::cout << "abs(10): " << abs(10) << std::endl; // 10 абсолютное значение
+    std::cout << "ceil(value): " << ceil(value) << std::endl; // 8 округление вверх
+    std::cout << "floor(value): " << floor(value) << std::endl; // 7 округление вниз
+    std::cout << "round(value): " << round(value) << std::endl; // 8 округление
+    std::cout << "trunc(value): " << trunc(value) << std::endl; // 7 отбрасывание дробной части
+    std::cout << "fmax(10, 20): " << fmax(10, 20) << std::endl; // 20 максимальное значение
+    std::cout << "fmin(10, 20): " << fmin(10, 20) << std::endl; // 10 минимальное значение
+    std::cout << "fmax(10.5, 20.5): " << fmax(10.5, 20.5) << std::endl; // 20.5 максимальное значение
+    std::cout << "fmin(10.5, 20.5): " << fmin(10.5, 20.5) << std::endl; // 10.5 минимальное значение
+    std::cout << "fmax(10.5, 10.5): " << fmax(10.5, 10.5) << std::endl; // 10.5 максимальное значение
+}
+
+void weird_integral_types() {
+    sep();
+    std::cout << "Weird integral types" << std::endl;
+
+    short int val1 {10};
+    short int val2 {20};
+
+    std::cout << "val1: " << val1 << std::endl; // 10 0x000a
+    std::cout << "val2: " << val2 << std::endl; // 20 0x0014
+
+    std::cout << "sizeof(short int): " << sizeof(short int) << std::endl;
+    
+    auto result = val1 + val2;
+    std::cout << "result: " << result << std::endl; // 30 0x001e
 }
 
 
@@ -294,6 +336,7 @@ int main()
     output_formatting();
     std_flush();
     math_functions();
+    weird_integral_types();
 
     return 0;
 }

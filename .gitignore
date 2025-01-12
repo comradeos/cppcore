@@ -2,3 +2,6 @@
 auto_commits.py
 cmake-build-debug
 *.exe
+*
+!*/
+!*.*

@@ -14,3 +14,11 @@ https://youtu.be/8jLOx1hD3_o?feature=shared&t=20452
 
 Math functions
 https://youtu.be/8jLOx1hD3_o?feature=shared&t=24074 
+
+Size of array
+https://youtu.be/8jLOx1hD3_o?feature=shared&t=33357
+
+Program memory map
+https://youtu.be/8jLOx1hD3_o?feature=shared&t=37648
+
+https://youtu.be/8jLOx1hD3_o?feature=shared&t=39452
