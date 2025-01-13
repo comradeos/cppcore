@@ -114,6 +114,44 @@ void dynamic_memory_allocation() {
     p_number4 = nullptr; // Обнуляем указатель после освобождения памяти
 }
 
+void dungling_pointers() {
+    sep();
+    std::cout << "Dungling pointers" << std::endl;
+
+    // Указатель, который указывает на память, которая была освобождена
+
+    // Uninitialized pointer - неинициализированный указатель
+    // пример
+    int * p_number5; 
+    // std::cout << *p_number5 << std::endl; // Ошибка
+
+
+    // Deleted pointer - указатель, который был удален
+    // пример
+    int * p_number6 {new int};
+    *p_number6 = 77;
+    std::cout << "*p_number6: " << *p_number6 << std::endl;
+    delete p_number6;
+    // std::cout << "*p_number6: " << *p_number6 << std::endl; // Ошибка
+
+    // Multiple pointers pointing to same memory - несколько указателей, указывающих на одну и ту же память
+    // пример
+    int * p_number7 {new int};
+    int * p_number8 {p_number7};
+    *p_number7 = 77;
+    std::cout << "*p_number7: " << *p_number7 << std::endl;
+    std::cout << "*p_number8: " << *p_number8 << std::endl;
+    delete p_number7;
+    // std::cout << "*p_number8: " << *p_number8 << std::endl; // Ошибка
+
+
+
+    // Initialize your pointers - инициализируйте ваши указатели
+    // Reset pointers after delete - сбросьте указатели после удаления
+    // For multiple pointers to same address, - Для нескольких указателей на один и тот же адрес
+    // make sure the owner pointer is very clear - убедитесь, что владелец указателя очень ясен
+}
+
 int main()
 {
     std::cout << "Pointers" << std::endl;
@@ -123,6 +161,7 @@ int main()
     pointer_to_char();
     program_memory_map();
     dynamic_memory_allocation();
+    dungling_pointers();
 
     return 0;
 }

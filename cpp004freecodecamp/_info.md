@@ -22,3 +22,6 @@ Program memory map
 https://youtu.be/8jLOx1hD3_o?feature=shared&t=37648
 
 https://youtu.be/8jLOx1hD3_o?feature=shared&t=39452
+
+When 'new' fails 
+https://youtu.be/8jLOx1hD3_o?feature=shared&t=41058
