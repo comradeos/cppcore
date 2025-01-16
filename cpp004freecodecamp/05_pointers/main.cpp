@@ -152,6 +152,27 @@ void dungling_pointers() {
     // make sure the owner pointer is very clear - убедитесь, что владелец указателя очень ясен
 }
 
+void when_new_fails() {
+    sep();
+    std::cout << "When new fails" << std::endl;
+
+    // Try to allocate a insanely huge array in one go
+    // Попробуйте выделить безумно огромный массив за один раз
+    // Unhandled new failure : Crash
+    // Необработанная ошибка new : Сбой
+    int* lots_of_ints1 { new int[1000000000000000000] }; // May give an error about - превышение размера массива.
+                                                        // error about exceeding array size - 
+
+    //Use a huge loop to try and exhaust the memory capabilities
+    // Используйте огромный цикл, чтобы попытаться исчерпать возможности памяти
+    //of your system. When new fails, your program is going to
+    //forcefuly terminate.
+
+    for (size_t i{} ; i < 100000000000 ; ++i){
+        int* lots_of_ints2 { new int[10000000] };
+    }
+}
+
 int main()
 {
     std::cout << "Pointers" << std::endl;
