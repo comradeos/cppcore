@@ -160,7 +160,7 @@ void when_new_fails() {
     // Попробуйте выделить безумно огромный массив за один раз
     // Unhandled new failure : Crash
     // Необработанная ошибка new : Сбой
-    int* lots_of_ints1 { new int[1000000000000000000] }; // May give an error about - превышение размера массива.
+    // int* lots_of_ints1 { new int[1000000000000000000] }; // May give an error about - превышение размера массива.
                                                         // error about exceeding array size - 
 
     //Use a huge loop to try and exhaust the memory capabilities
@@ -168,9 +168,17 @@ void when_new_fails() {
     //of your system. When new fails, your program is going to
     //forcefuly terminate.
 
-    for (size_t i{} ; i < 100000000000 ; ++i){
-        int* lots_of_ints2 { new int[10000000] };
+    // for (size_t i{} ; i < 100000000000 ; ++i){
+    //     int* lots_of_ints2 { new int[10000000] };
+    // }
+
+    try {
+        int * data = new int[100000000000000000];
+        std::cout << "data: " << data << std::endl;
+    } catch (std::bad_alloc &e) {
+        std::cout << "Exception: " << e.what() << std::endl;
     }
+    
 }
 
 int main()
@@ -183,6 +191,7 @@ int main()
     program_memory_map();
     dynamic_memory_allocation();
     dungling_pointers();
+    when_new_fails();
 
     return 0;
 }
