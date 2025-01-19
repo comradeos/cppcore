@@ -181,6 +181,109 @@ void when_new_fails() {
     
 }
 
+void null_pointer_safety() {
+    sep();
+    
+    std::cout << "Null pointer safety" << std::endl;
+
+    int * p_number9 {};
+
+    p_number9 = new int(7);
+
+    if (!(p_number9==nullptr)) {
+        std::cout << "p_number9 (puts to valid address): " << p_number9 << std::endl;
+        std::cout << "*p_number9: " << *p_number9 << std::endl;
+    } else {
+        std::cout << "p_number9 (puts to nullptr): " << p_number9 << std::endl;
+    }
+
+    delete p_number9;
+    p_number9 = nullptr;
+}
+
+void memory_leaks() {
+    sep();
+    std::cout << "Memory leaks" << std::endl;
+
+    // Memory leaks - утечки памяти
+
+    int * p_number {new int{7}}; // Выделяем память для одного int
+
+    int number {55}; // Создаем обычную переменную
+ 
+    p_number = &number; // Утечка памяти. Мы потеряли указатель на выделенную память для int 7
+
+    
+    sep();
+    // другая ситуация утечки памяти
+
+
+    
+}
+
+void q_tests() {
+    sep();
+    std::cout << "Q tests" << std::endl;
+
+    int num_a = 10;
+
+    std::cout << "num_a: " << num_a << std::endl;
+
+    delete &num_a;
+}
+
+
+
+
+
+class MyClassA {
+public:
+    MyClassA() {
+        std::cout << "Constructor MyClassA" << std::endl;
+    }
+
+    ~MyClassA() {
+        std::cout << "Destructor MyClassA" << std::endl;
+    }
+};
+
+
+void q_tests_2() {
+    sep();
+    std::cout << "Q tests 2" << std::endl;
+
+    MyClassA myClassAOjb1 = MyClassA();
+    delete &myClassAOjb1; // Ошибка 
+    // https://chatgpt.com/share/678d40ed-563c-800a-a830-c1ee392f9fec
+}
+
+
+void array_dynamic_memory_allocation() {
+    sep();
+    std::cout << "Array dynamic memory allocation" << std::endl;
+
+    size_t size {10}; // size_t - беззнаковый целочисленный тип
+
+    double * p_salaries { new double[size]}; // Выделяем память для массива из 10 double, будем хранить мусор
+
+    int * p_students { new(std::nothrow) int[size]}; // Выделяем память для массива из 10 int, все элементы будут равны 0
+
+    double * p_scores { new double[size] {1,2,3,4,5}}; // Выделяем память для массива из 10 double, первые 5 элементов будут равны 1,2,3,4,5, остальные 0
+
+    if (p_scores) {
+        for (size_t i{}; i < size; ++i) {
+            std::cout << "p_scores[" << i << "]: " << p_scores[i] << std::endl;
+        }
+    }
+
+    // для того чтобы освободить память, выделенную для массива, нужно использовать оператор delete[] и указатель на первый элемент массива
+    delete[] p_scores;
+    p_scores = nullptr;
+    
+
+}
+
+
 int main()
 {
     std::cout << "Pointers" << std::endl;
@@ -192,6 +295,9 @@ int main()
     dynamic_memory_allocation();
     dungling_pointers();
     when_new_fails();
+    null_pointer_safety();
+    memory_leaks();
+    array_dynamic_memory_allocation();
 
     return 0;
 }
