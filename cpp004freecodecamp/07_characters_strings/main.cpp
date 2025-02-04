@@ -7,6 +7,7 @@ clear && g++ -std=c++17 -o main -Wall main.cpp && ./main
  */
 
 #include <iostream>
+#include <string>
 
 void sep() { std::cout << "-------------------------" << std::endl; }
 
@@ -81,7 +82,55 @@ void cstring_manipulation()
     char name[] = "Caleb";
     std::cout << std::strlen(name) << std::endl;
 
+    //Print out the comparison
+    sep();
+    char name1[] = "Caleb";
+    const char * name2 {"Caleb"};
 
+    std::cout << std::strcmp(name1, name2) << std::endl;
+    sep();
+    const char* string_datal{ "Alabama" };
+    const char* string_data2{ "Blabama" };
+
+    std::cout << std::strcmp(string_datal, string_data2) << std::endl;
+
+    // std::strcpy : copy a string
+
+    char name3[10];
+    std::strcpy(name3, name1);
+
+    std::cout << name3 << std::endl;
+
+
+    // C-string Concatenation and
+    // Copying
+    sep();
+    std::cout << "C-string Concatenation and Copying" << std::endl;
+    sep();
+
+    // std::strcat : Joining strings
+    std::cout << "std::strcat : Joining strings" << std::endl;
+   
+    char name4[10] = "Caleb";
+    char name5[10] = "Curry";
+
+    std::strcat(name4, name5);
+    std::cout << name4 << std::endl;
+}
+
+void std_string() {
+    sep();
+    // Introducing std::string
+    std::cout << "Introducing std::string" << std::endl;
+
+    // Declaring and using std::string
+    std::cout << "Declaring and using std::string" << std::endl;
+    std::string name = "Caleb";
+    std::cout << "name: " <<  name << std::endl;
+
+    std::string name1 = "Caleb";
+    std::string name2 {"Curry"};
+    std::cout << name1 + " " + name2 << std::endl;
 }
 
 int main()
@@ -95,6 +144,8 @@ int main()
     string_manipulation();
 
     cstring_manipulation();
+
+    std_string();
 
     return 0;
 }

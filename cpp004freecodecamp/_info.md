@@ -36,3 +36,11 @@ https://youtu.be/8jLOx1hD3_o?feature=shared&t=43866
 
 Character Manipulation And Strings
 https://youtu.be/8jLOx1hD3_o?feature=shared&t=45872
+
+
+Introducing std::string
+https://youtu.be/8jLOx1hD3_o?feature=shared&t=50479
+
+
+First Hand on Functions
+https://youtu.be/8jLOx1hD3_o?feature=shared&t=52107
