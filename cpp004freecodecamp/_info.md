@@ -29,18 +29,15 @@ https://youtu.be/8jLOx1hD3_o?feature=shared&t=41058
 When 'new' fails - practice
 https://www.youtube.com/watch?v=8jLOx1hD3_o&t=41058s
 
-
 References
 https://youtu.be/8jLOx1hD3_o?feature=shared&t=43866
-
 
 Character Manipulation And Strings
 https://youtu.be/8jLOx1hD3_o?feature=shared&t=45872
 
-
 Introducing std::string
 https://youtu.be/8jLOx1hD3_o?feature=shared&t=50479
 
-
 First Hand on Functions
 https://youtu.be/8jLOx1hD3_o?feature=shared&t=52107
+
