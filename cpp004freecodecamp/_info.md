@@ -59,3 +59,7 @@ https://youtu.be/8jLOx1hD3_o?feature=shared&t=70027
 
 
 https://youtu.be/8jLOx1hD3_o?feature=shared&t=76861
+
+
+This pointer
+https://youtu.be/8jLOx1hD3_o?feature=shared&t=79864

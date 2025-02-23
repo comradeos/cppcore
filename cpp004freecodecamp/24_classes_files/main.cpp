@@ -16,7 +16,6 @@ int main(int argc, char **argv)
     
     Person p("Ярослав", 35);
     p.introduce();
-    return 0;
 
     return 0;
 }
