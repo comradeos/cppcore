@@ -65,3 +65,5 @@ This pointer
 https://youtu.be/8jLOx1hD3_o?feature=shared&t=79864
 
 
+
+ 1 d
