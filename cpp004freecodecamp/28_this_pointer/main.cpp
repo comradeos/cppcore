@@ -2,19 +2,38 @@
 #include <string>
 #include "includes/separator.h"
 
-class Something {
-    public:
+class Dog 
+{
+    private: 
         std::string name;
+        int * age {nullptr};
+    public:
+        Dog(std::string_view name_param, int age_param);
+        ~Dog();
+        
+        // setters
+        void set_dog_name(std::string_view name_param) { name = name_param; }
+        void set_dog_age(int age_param) { *age = age_param; }
 
-        Something(std::string name) {
-            this->name = name;
-            std::cout << "Constructor called for " << name << std::endl;
-        }
-
-        ~Something() {
-            std::cout << "Destructor called for " << name << std::endl;
-        }
+        // getters
+        std::string get_dog_name() { return name; }
 };
+
+Dog::Dog(std::string_view name_param, int age_param)
+{
+    name = name_param;
+    age = new int;
+    *age = age_param;
+    std::cout << "Contructor called for " << this << std::endl;
+}
+
+Dog::~Dog()
+{
+    delete age;
+    std::cout << "Destructor called for " << this << std::endl;
+}
+
+
 
 int main(int argc, char **argv)
 {
@@ -22,7 +41,17 @@ int main(int argc, char **argv)
 
     sep();
 
-    Something s1("s1");
+    Dog dog1("Dog1", 5);
+
+    dog1.set_dog_name("Dog2");
+
+    dog1.set_dog_age(10);
+
+    sep();
+
+    std::cout << "Dog1 name: " << dog1.get_dog_name() << std::endl;
+
+    std::cout << "Done" << std::endl;
 
     return 0;
 }
