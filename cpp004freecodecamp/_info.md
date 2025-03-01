@@ -51,20 +51,17 @@ https://youtu.be/8jLOx1hD3_o?feature=shared&t=57471
 Template type parameters by reference
 https://youtu.be/8jLOx1hD3_o?feature=shared&t=66952
 
-
-
 custom concetps
 
 https://youtu.be/8jLOx1hD3_o?feature=shared&t=70027
 
-
 https://youtu.be/8jLOx1hD3_o?feature=shared&t=76861
-
 
 This pointer
 https://youtu.be/8jLOx1hD3_o?feature=shared&t=79864
 
-
-
 Protected members
 https://youtu.be/8jLOx1hD3_o?feature=shared&t=84077
+
+Resurrecting members back in scope
+https://youtu.be/8jLOx1hD3_o?feature=shared&t=87999
