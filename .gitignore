@@ -6,6 +6,3 @@ cmake-build-debug
 !*/
 !*.*
 .DS_Store
-___tmp/main.exe
-cpp002mem/lec_01/app.exe
-*.exe
